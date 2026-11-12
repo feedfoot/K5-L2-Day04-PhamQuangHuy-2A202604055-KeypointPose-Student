@@ -38,7 +38,7 @@ Rê chuột vào đúng điểm cho nó sáng lên rồi bấm `Q` (occluded) ho
 | `crowd` | 1 | 3 | | | |
 | `faces` | 8 | 8 | — | | |
 
-- Số ảnh người đã xong ở mốc phút 105: 60 / 10
+- Số ảnh người đã xong ở mốc phút 105: 10 / 10
 - Thời gian thực tế (phút): CP1 30 · CP2 30 · CP3 20
 - Ảnh tốn thời gian nhất là ảnh nào, vì sao?
 
@@ -67,17 +67,17 @@ Mã lỗi dùng đúng một trong: `lr_swap`, `vis_flag`, `position`, `missing`
 
 | Ảnh | Người / mặt | Điểm | Mã lỗi | Ghi chú | Đã sửa? |
 |---|---|---|---|---|---|
-| `000000399983` (easy) | Tay vợt | `left_hip`, `right_hip` | `position` | Hai hông đặt ở cạp quần short, khớp hông thật thấp hơn khoảng 1/3 quần | Chưa |
-| `000000399983` (easy) | Tay vợt | `right_elbow` | `position` | Tay phải gập ngang ngực, mình đặt khuỷu ở giữa ngực; khuỷu thật là chỗ gập, gần mép thân bên trái ảnh | Chưa |
+| `000000399983` (easy) | Tay vợt | `left_hip`, `right_hip` | `position` | Hai hông đặt ở cạp quần short, khớp hông thật thấp hơn khoảng 1/3 quần | - |
+| `000000399983` (easy) | Tay vợt | `right_elbow` | `position` | Tay phải gập ngang ngực, mình đặt khuỷu ở giữa ngực; khuỷu thật là chỗ gập, gần mép thân bên trái ảnh |-|
 | `000000381889` (crowd) | 3 người cắt bánh và người cầm máy ảnh | — | `ok` | Hướng từng người đúng, mỗi người một skeleton, không có xương vắt sang người khác | — |
 | `000000351176` (back) | Tay vợt quay lưng | — | `ok` | `left_*` nằm bên trái ảnh, mũi và mắt để `v = 0`, hai tai thấy nên `v = 2` | — |
-| `000000311497` (occluded) | Cậu nhặt bóng phía sau | cả người | `missing` | Người thật đứng sau, cao hơn 60 px, mình chỉ gán tay vợt và bỏ sót người này | Chưa |
-| `000000311497` (occluded) | Tay vợt | `left_knee`/`right_knee`, `left_ankle`/`right_ankle` | `lr_swap` | Script cảnh báo cặp gối, cổ chân ngược phía. Lần đùi từ hông xuống thì chân trước mọc từ hông phải, nên nghi mình gán ngược | Chưa |
-| `000000123544` (back) | Người chạy | `left_eye`, `left_ear` | `vis_flag` | Người chạy nhìn nghiêng sang phải ảnh, mắt và tai trái ở phía khuất nhưng mình để `v = 2`, điểm còn nằm lơ lửng trước mặt. Phải là `v = 0` | Chưa |
-| `000000123544` (back) | Người chạy | `left_knee`/`right_knee`, `left_ankle`/`right_ankle` | `lr_swap` | Chân co phía sau mọc từ hông phải nhưng mình gán là chân trái. Script cũng cảnh báo | Chưa |
-| `000000123544` (back) | Người chạy | `left_hip` | `vis_flag` | Hông trái không bị gì che nhưng đang là `occluded`, phải là `v = 2` | Chưa |
+| `000000311497` (occluded) | Cậu nhặt bóng phía sau | cả người | `missing` | Người thật đứng sau, cao hơn 60 px, mình chỉ gán tay vợt và bỏ sót người này | - |
+| `000000311497` (occluded) | Tay vợt | `left_knee`/`right_knee`, `left_ankle`/`right_ankle` | `lr_swap` | Script cảnh báo cặp gối, cổ chân ngược phía. Lần đùi từ hông xuống thì chân trước mọc từ hông phải, nên nghi mình gán ngược | - |
+| `000000123544` (back) | Người chạy | `left_eye`, `left_ear` | `vis_flag` | Người chạy nhìn nghiêng sang phải ảnh, mắt và tai trái ở phía khuất nhưng mình để `v = 2`, điểm còn nằm lơ lửng trước mặt. Phải là `v = 0` |-|
+| `000000123544` (back) | Người chạy | `left_knee`/`right_knee`, `left_ankle`/`right_ankle` | `lr_swap` | Chân co phía sau mọc từ hông phải nhưng mình gán là chân trái. Script cũng cảnh báo | - |
+| `000000123544` (back) | Người chạy | `left_hip` | `vis_flag` | Hông trái không bị gì che nhưng đang là `occluded`, phải là `v = 2` | - |
 | `000000123544` (back) | Số 23 | `nose`, `right_eye`, `right_ear`, `right_elbow`, `right_wrist` | `vis_flag` | Lúc đầu các điểm này là `v = 2` và bị kéo lạc sang chỗ găng và bãi cỏ. Người quay lưng, tay phải bị thân che nên chuyển hết sang `outside` | Có |
-| `000000123544` (back) | Số 23 | `left_wrist` | `vis_flag` | Cổ tay trái nằm trong găng nhưng đang `v = 2`, phải là `occluded` | Chưa |
+| `000000123544` (back) | Số 23 | `left_wrist` | `vis_flag` | Cổ tay trái nằm trong găng nhưng đang `v = 2`, phải là `occluded` | - |
 | `face_505385` (nghiêng) | Mặt nghiêng | — | `ok` | Mắt phải (phía xa) vẫn thấy đủ khóe và mí, trái/phải đúng | — |
 | `face_175798` (tóc che) | Mặt tóc xoăn | `left_eye_upper`, `right_eye_upper` | `position` | Điểm mí trên hơi cao, nằm trên lông mi thay vì mép mí | Chưa |
 | `face_324513` (kính râm) | Mặt đeo kính râm | 4 điểm `left_eye_*` | `position` | Lúc đầu 4 điểm mắt trái co cụm nhỏ hơn hẳn mắt phải; đã kéo giãn ra theo tròng kính | Có |
@@ -105,7 +105,7 @@ Tự kiểm tay trong file JSON:
 
 Sau khi xuất, CVAT ghi `occluded` thành `v = 1` và `outside` thành `v = 0`. Tọa độ của điểm `outside` trong file là `0, 0` hay tọa độ cũ? Tọa độ cũ (ví dụ cổ chân người chạy vẫn giữ x âm, ngoài ảnh).
 
-Hai job đã chuyển sang completed trên CVAT? Có / Không
+Hai job đã chuyển sang completed trên CVAT? Có 
 
 Dán phần **TÓM TẮT** in ra từ `src/check_submission.py`:
 
