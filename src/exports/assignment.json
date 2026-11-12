@@ -1,0 +1,43 @@
+{
+ "mssv": "2A202604055",
+ "ten": "PhamQuangHuy",
+ "pool_version": "d04-k5-v2",
+ "cvat_user": "huyde1357",
+ "project": "d04-keypoint",
+ "persons": [
+  "000000162046.jpg",
+  "000000294379.jpg",
+  "000000349521.jpg",
+  "000000390585.jpg",
+  "000000399983.jpg",
+  "000000177338.jpg",
+  "000000179201.jpg",
+  "000000311497.jpg",
+  "000000123544.jpg",
+  "000000351176.jpg",
+  "000000150192.jpg",
+  "000000381889.jpg"
+ ],
+ "faces": [
+  "face_155465.jpg",
+  "face_300399.jpg",
+  "face_469647.jpg",
+  "face_449454.jpg",
+  "face_505385.jpg",
+  "face_81239.jpg",
+  "face_324513.jpg",
+  "face_175798.jpg"
+ ],
+ "tasks": {
+  "persons": {
+   "task_id": 13,
+   "job_id": 12,
+   "task_name": "persons-PhamQuangHuy"
+  },
+  "faces": {
+   "task_id": 14,
+   "job_id": 13,
+   "task_name": "faces-PhamQuangHuy"
+  }
+ }
+}
